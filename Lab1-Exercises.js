@@ -1,0 +1,36 @@
+//Exercise 1 - ES6 Syntax
+const greetText = 'Hello ';
+let gretter = (myArray, counter) =>{
+    for(let index of myArray){
+        console.log(greetText + index);
+    }
+
+}
+gretter(['Randy Savage','Ric Flair','Hulk Hogan'],3);
+
+//Exercise 2 - Capitalize First Letter
+const words = ['fooBar','nodeJs'];
+const capitalize = ([first, ...rest]) =>{
+    return first.toUpperCase()+rest;
+}
+console.log(capitalize('fooBar'));
+console.log(capitalize('nodeJs'));
+
+//Exercise 3 - Capitalize Color Names
+const colors =['red','green','blue']
+console.log(colors.map(capitalize)) 
+
+//Exercise 4 - Filter Values
+var values = [1,60,34,30,20,5]
+const filterLessThan20 = values.filter(values => values<20);
+console.log(filterLessThan20);
+
+//Exercise 5 - Calculate sum/product
+var array = [1,2,3,4]
+const calculateSum =(accumulator,currentValue) => accumulator + currentValue;
+const calculateProduct =(accumulator,currentValue) => accumulator * currentValue;
+
+console.log(array.reduce(calculateSum));
+console.log(array.reduce(calculateProduct));
+
+//Exercise 6
